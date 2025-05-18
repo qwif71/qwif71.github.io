@@ -11,50 +11,29 @@
       font-family: 'DM Sans', sans-serif;
       background: #1f1f1f;
       color: #e6e3dc;
-      padding: 3rem;
-      overflow-x: hidden;
+      padding: 3rem 1rem;
+      display: flex;
+      justify-content: center;
     }
 
     .container {
-      position: relative;
-      max-width: 1000px;
-      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      max-width: 800px;
+      width: 100%;
     }
 
     .box {
-      position: absolute;
       background: #2a2a2a;
       border-radius: 24px;
       padding: 1.5rem 2rem;
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-      width: 300px;
-      z-index: 1;
       transition: transform 0.2s;
     }
 
     .box:hover {
-      transform: scale(1.02);
-    }
-
-    .box1 {
-      top: 0;
-      left: 0;
-      transform: rotate(-2deg);
-      z-index: 2;
-    }
-
-    .box2 {
-      top: 160px;
-      left: 220px;
-      transform: rotate(2deg);
-      z-index: 3;
-    }
-
-    .box3 {
-      top: 340px;
-      left: 80px;
-      transform: rotate(-1.5deg);
-      z-index: 1;
+      transform: scale(1.01);
     }
 
     h2 {
@@ -102,28 +81,16 @@
     button:hover {
       background: #e8cab5;
     }
-
-    @media (max-width: 768px) {
-      .box {
-        position: static;
-        transform: none !important;
-        width: 100%;
-        margin-bottom: 2rem;
-      }
-      .container {
-        padding: 1rem;
-      }
-    }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="box box1">
+    <div class="box">
       <h2>🎧 Songs</h2>
       <p>Soft sounds, melancholy vibes, and rain through the headphones. This is your little mood intro space.</p>
     </div>
 
-    <div class="box box2">
+    <div class="box">
       <h2>💬 Personality</h2>
       <p>INFP | Pisces Sun | Moon in Leo</p>
       <div class="tag">Sensitive</div>
@@ -131,7 +98,7 @@
       <div class="tag">Justice Seeker</div>
     </div>
 
-    <div class="box box3">
+    <div class="box">
       <h2>📝 Message Me</h2>
       <form action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST">
         <input type="text" name="name" placeholder="Your name" required />
