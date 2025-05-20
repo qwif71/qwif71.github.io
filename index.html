@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Aesthetic Boxes</title>
+  <title>One Page Bio</title>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -19,7 +19,7 @@
 
     .main-card {
       position: relative;
-      background: #94b2d4;
+      background: #152d45;
       border-radius: 40px;
       width: 90%;
       max-width: 900px;
@@ -30,12 +30,12 @@
 
     .floating-box {
       position: absolute;
-      border-radius: 30px;
       padding: 1.5rem;
       color: #e6e3dc;
-      background: #3a3a3a;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-      backdrop-filter: blur(4px);
+      background: rgba(58, 58, 58, 0.6);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
     }
 
     .box1 {
@@ -43,6 +43,7 @@
       left: 50px;
       width: 200px;
       height: 150px;
+      border-radius: 30px 0 30px 0;
     }
 
     .box2 {
@@ -50,7 +51,8 @@
       left: 180px;
       width: 150px;
       height: 120px;
-      background: #4a4a4a;
+      background: rgba(74, 74, 74, 0.6);
+      border-radius: 0 30px 0 30px;
     }
 
     .box3 {
@@ -58,8 +60,8 @@
       left: 80px;
       width: 250px;
       height: 130px;
-      background: #363636;
-      transform: translate(10px, -10px);
+      background: rgba(54, 54, 54, 0.6);
+      border-radius: 30px 30px 0 0;
     }
 
     .box4 {
@@ -67,29 +69,61 @@
       left: 650px;
       width: 200px;
       height: 100px;
-      background: #191f25;
+      background: rgba(25, 31, 37, 0.6);
+      border-radius: 20px;
     }
 
     .box5 {
       top: 320px;
       left: 400px;
-      width: 180px;
-      height: 100px;
-      background: #444;
-      transform: translateY(-20px);
+      width: 200px;
+      height: auto;
+      background: rgba(68, 68, 68, 0.6);
+      border-radius: 0 30px 30px 0;
     }
 
     .floating-box h2 {
       margin: 0 0 0.5rem;
       font-size: 1.2rem;
-      color: #dcd1c0;
+      color: #f0eae3;
     }
 
     .floating-box p {
       font-size: 0.9rem;
       line-height: 1.4;
+      margin: 0;
     }
 
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    input, textarea {
+      background: rgba(255, 255, 255, 0.1);
+      border: none;
+      border-radius: 10px;
+      padding: 0.5rem;
+      color: #fff;
+      font-family: inherit;
+    }
+
+    button {
+      background: #e6d3c9;
+      color: #1f1f1f;
+      border: none;
+      border-radius: 10px;
+      padding: 0.6rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background: #d4bfae;
+    }
   </style>
 </head>
 <body>
@@ -100,24 +134,23 @@
     </div>
     <div class="floating-box box2">
       <h2>Interests</h2>
-      <p>Math
-      Piano
-      Coding
-      Running</p>
+      <p>Math<br>Piano<br>Coding<br>Running</p>
     </div>
     <div class="floating-box box3">
       <h2>Songs</h2>
-      <p>Messy
-      Breath
-      Nonsense</p>
+      <p>Messy<br>Breath<br>Nonsense</p>
     </div>
     <div class="floating-box box4">
       <h2>Dislikes</h2>
       <p>Tomatoes</p>
     </div>
     <div class="floating-box box5">
-      <h2>Extra</h2>
-      <p>idk</p>
+      <h2>Say hi!</h2>
+      <form action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST">
+        <input type="text" name="name" placeholder="Your name" required />
+        <textarea name="message" rows="3" placeholder="Write a message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
     </div>
   </div>
 </body>
